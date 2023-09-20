@@ -25,3 +25,5 @@
     - test accuracy: 88.4%
 
 - each model runed for 10 epochs without data augmentation
+
+### Source: Rayan Ahmed - Machine Learning Practical Workout - 8 Real-World Projects
