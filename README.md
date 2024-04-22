@@ -27,3 +27,5 @@
 - each model runed for 10 epochs without data augmentation
 
 ### Source: Rayan Ahmed - Machine Learning Practical Workout - 8 Real-World Projects
+![cifar](https://github.com/abdo-ashraf/CIFAR_10-Dataset-Classifier/assets/88582125/7a04ec2b-76bf-488b-aaf5-0bd2d171fe70)
+
