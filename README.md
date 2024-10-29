@@ -1,4 +1,5 @@
 # CIFAR_10-Dataset-Classifier
+- Deployment Link: https://huggingface.co/spaces/TheDemond/CIFAR-10_classifier
 - CIFAR-10 is a dataset that consists of several images divided into the following 10 classes:
     0. Airplanes
     1. Cars
