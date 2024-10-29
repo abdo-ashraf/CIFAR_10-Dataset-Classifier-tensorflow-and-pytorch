@@ -73,9 +73,19 @@ def post_processor(raw_output):
 def lunch(raw_input):
     input = pre_processor(raw_input)
     output = model(input.unsqueeze(0))
-    
     return post_processor(output)
 
-demo = gr.Interface(fn=lunch, inputs=gr.Image(type="pil"), outputs=['text', 'text'])
+custom_css ='.gr-button {background-color: #bf4b04; color: white;}'
+
+with gr.Blocks(css=custom_css) as demo:
+    with gr.Row():
+        with gr.Column():
+            input_image = gr.Image(type="pil", label='Input Image')
+            gr.Text("Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, Truck", label="Supported Classes:")
+        with gr.Column():
+            class_name = gr.Textbox(label="This is (a\\an)")
+            confidence = gr.Textbox(label='Confidence')
+            start_btn = gr.Button(value='Submit', elem_classes=["gr-button"])
+    start_btn.click(fn=lunch, inputs=input_image, outputs=[class_name, confidence])
 
 demo.launch()
